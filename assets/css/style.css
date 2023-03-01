@@ -1,0 +1,52 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+h5,h1{
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% auto;
+    color: #fff;
+    text-emphasis-color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 140px;
+    animation: textclip 2s linear infinite;
+}
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+header{
+   height: fit-content;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+#profilePic{
+    width: fit-content;
+    height: fit-content;
+}
+img{
+    width: 414px;
+    height: 230px;
+}
+#modalPic{
+    height: 400px;
+    width: 400px;
+}
+.content{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
