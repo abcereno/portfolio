@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <ul class=" d-flex justify-content-evenly list-unstyled">
+            <ul class=" d-flex justify-content-evenly flex-wrap list-unstyled">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#me">ABOUT</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
@@ -26,27 +26,27 @@
             <div class="col-md-8 d-flex flex-column justify-content-center align-items-center">
                 <h2>Hi! I'm</h2>
                 <h1>Anthony Bernard Cereno</h1>
-                <h2>A Full-Stack Web Developer In The Making</h2>
+                <h2>A Full-Stack Web Developer In <h6 id="timer"></h6></h2>
             </div>
             <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <img id="profilePic" src="./assets/images/me.png">
+                <img id="profilePic" class="img-fluid" src="./assets/images/me.png">
             </div>
         </div>
         <div class="row content reveal" id="me">
             <div class="col-12">
                 <h1 class="d-flex justify-content-center align-items-center">About Me</h1>
-                <h6>"as long as you don't give up, you can still change the result."</h6>
-                <h6>"you will never win, if you never fight."</h6>
-                <h6>"bravery is not the absence of fear, but fighting it despite the presence of fear."</h6>
-                <h6>"its not the strong ones who win, who ever win is the strongest."</h6>
-                <h6>"it takes one tree to make a million match, but it only takes one match to burn a million trees."</h6>
-                <h6>"it's not your fault that you are born poor, but it's your fault when you die poor."</h6>
-                <h6>"the difference between a graduate and an undergraduate, is a piece of paper."</h6>
-                <h6>"no one cares about your journey, only results matter."</h6>
-                <h6>"the good thing about hitting rock bottom, is there is only way up."</h6>
-                <h6>"don't over estimate what you could do in a year, and under estimate what you could do in a decade."</h6>
-                <h6>"there are many paths to the top of the mountain, but the view is always the same"</h6>
-                <h6>"keep everything, broaden your skill set. So that when the moment need it, you have it."</h6>
+                <h4>"Persist until victory is yours; a single defeat doesn't have to define your fate."</h4>
+                <h4>"To win the fight, you must first enter the ring; standing on the sidelines guarantees defeat."</h4>
+                <h4>"True courage lies not in the absence of fear, but in the face of it, refusing to back down."</h4>
+                <h4>"The ultimate victor is not always the strongest; it's the one who perseveres and outlasts the rest."</h4>
+                <h4>"One tree can ignite a million more, but one spark of determination can ignite a million more successes."</h4>
+                <h4>"Your upbringing isn't your fault, but staying in poverty is; take ownership of your life and make it count."</h4>
+                <h4>"It's not just a piece of paper; it's a symbol of dedication, hard work, and resilience."</h4>
+                <h4>"Results are what matter, but the journey is what shapes you; embrace the lessons along the way."</h4>
+                <h4>"Rock bottom may seem like the end, but it's also the beginning of the climb to greatness."</h4>
+                <h4>"don't over estimate what you could do in a year, and under estimate what you could do in a decade."</h4>
+                <h4>"There are countless routes to the top, but the view from the summit is always worth the climb."</h4>
+                <h4>"Equip yourself with an arsenal of skills; you never know when they might come in handy."</h4>
             </div>
         </div>
         <div class="row content reveal" id="portfolio">
@@ -57,8 +57,8 @@
                 <div class="card m-2">
                     <img src="./assets/images/ex5.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">Inventory Management System</h5>
+                    <p class="card-text">A Multi-page Responsive Website using CLI, HTML, CSS, Bootstrap, RWD, Github, Github Pages<br><h6>Completed</h6></p>
                     <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
@@ -67,8 +67,8 @@
                 <div class="card m-2">
                     <img src="./assets/images/ex8.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Major Project</h5>
+                        <p class="card-text">An API-driven Mini Web Application using React JS, Github, JavaScript/jQuery, Web APIs, Heroku/Netlify<br><h6 id="majorProjectTimer"></h6></p>
                         <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
@@ -77,8 +77,8 @@
                 <div class="card m-2">
                     <img src="./assets/images/ex7.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Capstone Project</h5>
+                        <p class="card-text">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku<br><h6 id="capstoneTimer"></h6></p>
                         <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
@@ -86,49 +86,56 @@
         </div>
         <div class="row content reveal" id="interests">
             <div class="col-12">
-                <h1 class="d-flex justify-content-center align-items-center">INTERESTS</h1>
+                <h1 class="d-flex justify-content-center align-items-center">SKILL SETS</h1>
             </div>
-            <ul class="col-md-3 col-sm-12 mt-3">
-                <h1>Marketing</h1>
-                <li>LAZADA</li>
-                <li>SHOPEE</li>
-                <li>AMAZON</li>
-                <li>MARKETPLACE</li>
+            <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+                <h1>Languages</h1>
+                <li><h3>HTML 5</h3></li>
+                <li><h3>CSS 3</h3></li>
+                <li><h3>JAVASCRIPT</h3></li>
+                <li><h3>PHP</h3></li>
+                <li><h3>SQL</h3></li>
             </ul>
-            <ul class="col-md-3 col-sm-12 mt-3">
-                <h1>Coding</h1>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>BOOTSTRAP</li>
+            <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+                <h1>Soft Skills</h1>
+                <li><h3>Critical thinking</h3></li>
+                <li><h3>Teamwork</h3></li>
+                <li><h3>Problem solving</h3></li>
+                <li><h3>Communication</h3></li>
+                <li><h3>Technology Trend Awareness</h3></li>
             </ul>
-            <ul class="col-md-3 col-sm-12 mt-3">
-                <h1>Music</h1>
-                <li>ACOUSTIC</li>
-                <li>POP</li>
-                <li>JAPANESE</li>
-                <li>OPM</li>
+            <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+                <h1>Frameworks</h1>
+                <li><h3>Bootstrap</h3></li>
+                <li><h3>Sass</h3></li>
+                <li><h3>Node.js</h3></li>
+                <li><h3>React.js</h3></li>
+                <li><h3>Laravel</h3></li>
             </ul>
-            <ul class="col-md-3 col-sm-12 mt-3">
-                <h1>Gaming</h1>
-                <li>DOTA2</li>
-                <li>MLBB</li>
-                <li>BLACK DESERT</li>
-                <li>COD</li>
+            <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+                <h1>Other Tech</h1>
+                <li><h3>Git Bash</h3></li>
+                <li><h3>Github</h3></li>
+                <li><h3>Docker</h3></li>
+                <li><h3>VsCode</h3></li>
+                <li><h3>Postman</h3></li>
+                <li><h3>Figma</h3></li>
+                <li><h3>Bash Shell</h3></li>
+                <li><h3>MySQl</h3></li>
             </ul>
         </div>
-        <div class="row content reveal" id="language">
+        <div class="row d-flex justify-content-evenly content reveal" id="language">
             <div class="col-12">
-                <h1 class="d-flex justify-content-center align-items-center">LANGUAGES</h1>
+                <h1 class="d-flex justify-content-center align-items-center">SERVERS</h1>
             </div>
             <div class="card m-2" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="https://tse4.mm.bing.net/th?id=OIP.bI8KDjd8-nDvzTX_Uok7FwHaHa&pid=Api&P=" class="img-fluid rounded-start" alt="...">
+                    <img src="https://www.mindphp.com/images/articles/202110/laragon-icon.jpg" class="img-fluid rounded-start" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title">Laragon</h5>
                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -138,11 +145,11 @@
             <div class="card m-2" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" class="img-fluid rounded-start" alt="...">
+                    <img src="https://mms.businesswire.com/media/20211123005573/en/929867/23/vercel-logo-freelogovectors.net.jpg" class="img-fluid rounded-start" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title">Vercel</h5>
                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
@@ -152,11 +159,11 @@
             <div class="card m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" class="img-fluid rounded-start" alt="...">
+                        <img src="https://www.appdynamics.com/c/r/appdynamics/solutions/azure-monitoring/index/jcr:content/Title/blade_copy_172843868/bladeContents1/image/image.img.png/1670878360555.png" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Azure</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
@@ -166,11 +173,11 @@
             <div class="card m-2" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                    <img src="https://image.pngaaa.com/772/3801772-small.png" class="img-fluid rounded-start" alt="...">
+                    <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_bf0fb4cb7fe948c42f37ded73895638f/salesforce-heroku.png" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Heroku</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>

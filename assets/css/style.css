@@ -3,7 +3,7 @@ html{
 }
 body{
     overflow-x: hidden;
-    width: fit-content;
+    margin: auto;
 }
 h5,h1{
     background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
@@ -42,12 +42,22 @@ header{
 img{
     width: 414px;
     height: 230px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
 }
 #modalPic{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 .content{
     margin-top: 100px;
     margin-bottom: 50px;
+    height: auto;
+}
+#interests ul li,h1,h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
