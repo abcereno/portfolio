@@ -52,8 +52,8 @@ img{
     width: 300px;
 }
 .content{
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 100px;
     height: auto;
 }
 #interests ul li,h1,h5{
@@ -61,3 +61,11 @@ img{
     justify-content: center;
     align-items: center;
 }
+.card-body{
+    height: 225px;
+}
+#overflow{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+

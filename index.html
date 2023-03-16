@@ -12,7 +12,42 @@
     </head>
 <body>
     <div class="container">
-        <div class="row">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">ABC</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#me">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#skillsets">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#language">Languages</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!-- <div class="row">
             <ul class=" d-flex justify-content-evenly flex-wrap list-unstyled">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#me">ABOUT</a></li>
@@ -21,9 +56,9 @@
                 <li><a href="#language">LANGUAGES</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
-        </div>
-        <div class="row content" id="home">
-            <div class="col-md-8 d-flex flex-column justify-content-center align-items-center">
+        </div> -->
+        <div class="row content mt-5" id="home">
+            <div class="col-md-8 mt-5 d-flex flex-column justify-content-center align-items-center">
                 <h2>Hi! I'm</h2>
                 <h1>Anthony Bernard Cereno</h1>
                 <h2>A Full-Stack Web Developer In <h6 id="timer"></h6></h2>
@@ -35,50 +70,77 @@
         <div class="row content reveal" id="me">
             <div class="col-12">
                 <h1 class="d-flex justify-content-center align-items-center">About Me</h1>
-                <h4>"Don't give up, success is within reach; keep pushing forward, stay positive and teach."</h4>
-                <h4>"To win the battle, you must engage; standing idle ensures you'll never make the stage."</h4>
-                <h4>"True bravery shines in the face of fear; when you face your demons, success will draw near."</h4>
-                <h4>"Victory belongs to those who persist; keep pushing ahead, no matter how hard you're hit."</h4>
-                <h4>"One tree can start a blaze, it's true; but one small spark can ignite a fire in you."</h4>
-                <h4>"Your circumstances don't define your fate; take action now, don't hesitate."</h4>
-                <h4>"A degree is a trophy you've earned with pride; it shows your knowledge and perseverance inside."</h4>
-                <h4>"Results matter, that's certainly true; but your journey is where you grow, learn and renew."</h4>
-                <h4>"When you hit rock bottom, it may seem like the end; but it's the beginning of the climb, my friend."</h4>
-                <h4>"Don't underestimate what you'll do in a decade; with patience and effort, you'll rise like a renegade."</h4>
-                <h4>"There are many paths that lead to success; the view from the top is worth the climb, no less."</h4>
-                <h4>"Broaden your skills, prepare for the fight; a diverse set of talents will keep your future bright."</h4>
-            </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h4>"Don't give up, success is within reach; keep pushing forward, stay positive and teach."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"To win the battle, you must engage; standing idle ensures you'll never make the stage."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"True bravery shines in the face of fear; when you face your demons, success will draw near."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"Victory belongs to those who persist; keep pushing ahead, no matter how hard you're hit."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"One tree can start a blaze, it's true; but one small spark can ignite a fire in you."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"Your circumstances don't define your fate; take action now, don't hesitate."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"A degree is a trophy you've earned with pride; it shows your knowledge and perseverance inside."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"Results matter, that's certainly true; but your journey is where you grow, learn and renew."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"When you hit rock bottom, it may seem like the end; but it's the beginning of the climb, my friend."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"Don't underestimate what you'll do in a decade; with patience and effort, you'll rise like a renegade."
+                        </h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"There are many paths that lead to success; the view from the top is worth the climb, no less."</h4>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>"Broaden your skills, prepare for the fight; a diverse set of talents will keep your future bright."</h4>
+                    </li>
+                </ul>
+                </div>
         </div>
         <div class="row content reveal" id="portfolio">
             <div class="col-12">
                 <h1 class="d-flex justify-content-center align-items-center">Bootcamp Journey</h1>
             </div>    
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-6 col-sm-12">
                 <div class="card m-2">
                     <img src="./assets/images/ex5.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                    <h5 class="card-title">Inventory Management System</h5>
+                    <h5 class="card-title">Mini Project</h5>
                     <p class="card-text">A Multi-page Responsive Website using CLI, HTML, CSS, Bootstrap, RWD, Github, Github Pages<br><h6>Completed</h6></p>
                     <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-6 col-sm-12">
                 <div class="card m-2">
                     <img src="./assets/images/ex8.png" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div id="overflow" class="card-body">
                         <h5 class="card-title">Major Project</h5>
                         <p class="card-text">An API-driven Mini Web Application using React JS, Github, JavaScript/jQuery, Web APIs, Heroku/Netlify<br><h6 id="majorProjectTimer"></h6></p>
                         <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-6 col-sm-12">
                 <div class="card m-2">
                     <img src="./assets/images/ex7.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Capstone Project</h5>
-                        <p class="card-text">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku<br><h6 id="capstoneTimer"></h6></p>
+                        <p  class="card-text ">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku<br><h6 id="capstoneTimer"></h6></p>
                         <a href="#" class="btn btn-primary">Visit Page</a>
                     </div>
                 </div>
