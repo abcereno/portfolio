@@ -26,11 +26,24 @@ document.addEventListener("DOMContentLoaded", function() {
         const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
+        if(days <= 0){
+            return 0;
+        }
+        if(hours <= 0){
+            return 0;
+        }
+        if(minutes <= 0){
+            return 0;
+        }
+        if(seconds <= 0){
+            timer.innerText = "Complete";
+            
+        }
         timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
       }
     function countDown(){
         const now = new Date().getTime();
-        const countdownDate = new Date('March 25, 2023').getTime();
+        const countdownDate = new Date('March 28, 2023').getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
@@ -38,7 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
-        majorProjectTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        if(distanceBase <= 0){
+            majorProjectTimer.innerText = "Completed";
+        }else{
+            majorProjectTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
     }
     function countDownCap(){
         const now = new Date().getTime();
@@ -50,7 +67,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
-        capstoneTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        if(distanceBase != 0){
+            capstoneTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }else{
+            capstoneTimer.innerText = "Completed";
+        }
     }
     const countdownInterval = setInterval(() => {
         getChrono();
