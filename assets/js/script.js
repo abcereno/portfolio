@@ -26,20 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
-        if(days <= 0){
-            return 0;
+        if(distanceBase <= 0){
+            timer.innerText = "Completed";
+        }else{
+            timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
-        if(hours <= 0){
-            return 0;
-        }
-        if(minutes <= 0){
-            return 0;
-        }
-        if(seconds <= 0){
-            timer.innerText = "Complete";
-            
-        }
-        timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
       }
     function countDown(){
         const now = new Date().getTime();
