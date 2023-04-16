@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     function countDownCap(){
         const now = new Date().getTime();
-        const countdownDate = new Date('April 28, 2023').getTime();
+        const countdownDate = new Date('April 22, 2023').getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
