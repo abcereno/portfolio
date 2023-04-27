@@ -58,10 +58,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const minutes = Math.floor((distanceBase % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
-        if(distanceBase != 0){
-            capstoneTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }else{
+        if(distanceBase <= 0){
             capstoneTimer.innerText = "Completed";
+        }else{
+            capstoneTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     }
     const countdownInterval = setInterval(() => {
