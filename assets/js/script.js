@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
         if(distanceBase <= 0){
-            timer.innerText = "Graduated KodeGo Online Bootcamp";
+            timer.innerText = "Graduated KodeGo Bootcamp";
         }else{
             timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
@@ -69,8 +69,18 @@ document.addEventListener("DOMContentLoaded", function() {
         countDown();
         countDownCap();
     }, 1000);
+    const links = document.querySelectorAll(".nav-link");
 
-
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", () => {
+        const offcanvasContainer = document.querySelector("#offcanvasDarkNavbar");
+        const offcanvas = bootstrap.Offcanvas.get(offcanvasContainer);
+        offcanvas.hide();
+      });
+    }
+    
+    
+    
 
 
 

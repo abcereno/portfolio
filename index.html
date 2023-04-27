@@ -18,7 +18,7 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="offcanvas offcanvas-end text-bg-dark w-25" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas offcanvas-end text-bg-dark w-25 navbar-collapse" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Links</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -26,22 +26,22 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                      <a class="nav-link js-scroll-trigger" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#me">About</a>
+                      <a class="nav-link js-scroll-trigger" href="#me">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#portfolio">Portfolio</a>
+                      <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#skillsets">Skills</a>
+                      <a class="nav-link js-scroll-trigger" href="#skillsets">Skills</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#language">Languages</a>
+                      <a class="nav-link js-scroll-trigger" href="#language">Languages</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#contact">Contact</a>
+                      <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </div>
               </div>
@@ -61,7 +61,7 @@
             <div class="col-md-8 mt-5 d-flex flex-column justify-content-center align-items-center">
                 <h2>Hi! I'm</h2>
                 <h1>Anthony Bernard Cereno</h1>
-                <h2>A Full-Stack Web Developer In <h6 id="timer"></h6></h2>
+                <h2>Full-Stack Web Developer <h6 id="timer"></h6></h2>
                 <a href="./Anthony Bernard Cereno - CV.pdf" download>
                     <button type="button" class="btn btn-primary">Download CV</button>
                 </a>
@@ -140,7 +140,7 @@
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="card m-2">
-                    <img src="./assets/images/ex7.png" class="card-img-top" alt="...">
+                    <img src="./assets/images/capstone.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Capstone Project</h5>
                         <p  class="card-text ">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku<br><h6 id="capstoneTimer"></h6></p>
@@ -285,5 +285,11 @@
         </div>
       </div>
 <!--  -->
+<script type="text/javascript">    
+    $('.js-scroll-trigger').click(function() {
+$('.navbar-collapse').collapse('hide');
+});
+</script>
+
 </body>
 </html>
