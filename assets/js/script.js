@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const capstoneTimer = document.getElementById("capstoneTimer");
     function getChrono(){
         const now = new Date().getTime();
-        const countdownDate = new Date('April 28, 2023').getTime();
+        const countdownDate = new Date('April 27, 2023').getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
         if(distanceBase <= 0){
-            timer.innerText = "Completed";
+            timer.innerText = "Graduated KodeGo Online Bootcamp";
         }else{
             timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
