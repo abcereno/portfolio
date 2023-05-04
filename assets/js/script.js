@@ -69,19 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         countDown();
         countDownCap();
     }, 1000);
-    const links = document.querySelectorAll(".nav-link");
-    const offcanvasContainer = document.querySelector("#offcanvasDarkNavbar");
 
-    for (let i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", () => {
-        offcanvasContainer.style.display = "hidden";
-      });
-    }
-    
-    const collapse = document.getElementById("navbar-toggler");
-    collapse.addEventListener("click", () => {
-        offcanvasContainer.style.display = "block";
-    })
 
     
     
