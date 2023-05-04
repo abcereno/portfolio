@@ -69,18 +69,5 @@ document.addEventListener("DOMContentLoaded", function() {
         countDown();
         countDownCap();
     }, 1000);
-
-
-    
-    
-
-
-
-
-
-
-
-
-
     });
 
