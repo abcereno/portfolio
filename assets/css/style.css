@@ -1,11 +1,20 @@
 html{
     scroll-behavior: smooth;
 }
+#profilePic{
+    width: fit-content;
+    height: fit-content;
+}
 body{
     background-image: url("../images/background.jpg") ;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
     margin: auto;
+}
+#home{
+    height: calc(100vh - 56px);
 }
 h5,h1{
     background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
@@ -31,19 +40,13 @@ header{
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .reveal.active{
     transform: translateY(0px);
     opacity: 1;
 }
-#profilePic{
-    width: fit-content;
-    height: fit-content;
-}
-img{
-    width: 414px;
-    height: 230px;
+img:not(#profilepic){
     display: flex;
     justify-content: center;
     margin: auto;
@@ -53,18 +56,25 @@ img{
     height: 300px;
     width: 300px;
 }
-.content{
+#modalPic1{
+    height: 100%;
+    width: 100%;
+}
+/* .content{
     margin-top: 150px;
     margin-bottom: 100px;
     height: auto;
-}
+} */
 #interests ul li,h1,h5{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.card-img-top{
+    height: 150px;
+}
 .card-body{
-    height: 225px;
+    min-height: 225px;
 }
 #overflow{
     padding-top: 0;
@@ -73,4 +83,23 @@ img{
 #skillsets ul li,#contact h6, #links h6{
     color: white;
 }
-
+.cardsize{
+    min-height: 400px;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+.child {
+    flex: 1;
+  }
+  
+  .top {
+    order: 1;
+  }
+  
+  .bottom {
+    order: 2;
+  }

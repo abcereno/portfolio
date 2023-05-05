@@ -24,7 +24,7 @@
                   <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Links</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body w-100">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
                       <a class="nav-link js-scroll-trigger" aria-current="page" href="#home">Home</a>
@@ -48,24 +48,19 @@
               </div>
             </div>
           </nav>
-        <!-- <div class="row">
-            <ul class=" d-flex justify-content-evenly flex-wrap list-unstyled">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#me">ABOUT</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#skillsets">SKILLS</a></li>
-                <li><a href="#language">LANGUAGES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div> -->
         <div class="row content mt-5" id="home">
             <div class="col-md-8 mt-5 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="text-light">Hi! I'm</h2>
                 <h1>Anthony Bernard Cereno</h1>
                 <h2 class="text-light">Full-Stack Web Developer <h6 class="text-light" id="timer"></h6></h2>
-                <a href="./Anthony Bernard Cereno - CV.pdf" download>
-                    <button type="button" class="btn btn-primary">Download CV</button>
-                </a>
+                <div class="d-flex justify-content-around w-50">
+                    <a href="./Anthony Bernard Cereno - CV.pdf" download>
+                        <button type="button" class="btn btn-primary d-inline-block">Download CV</button>
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#CV">
+                        <button  type="button" class="btn btn-primary d-inline-block">View only CV</button>
+                    </a>
+                </div>
             </div>
             <div class="col-md-4 d-flex justify-content-center align-items-center mt-5">
                 <img id="profilePic" class="img-fluid" src="./assets/images/me.png">
@@ -119,33 +114,48 @@
             <div class="col-12">
                 <h1 class="d-flex justify-content-center align-items-center">Bootcamp Journey</h1>
             </div>    
-            <div class="col-md-4 col-sm-12">
-                <div class="card m-2">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <div class="card m-2 cardsize">
                     <img src="./assets/images/miniproject.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Mini Project</h5>
-                    <p class="card-text">A Multi-page Responsive Website using CLI, HTML, CSS, Bootstrap, RWD, Github, Github Pages<br><h6>Completed</h6></p>
-                    <a href="https://abcereno.github.io/miniproject1/" class="btn btn-primary">Visit Page</a>
+                    <div class="card-body parent">
+                        <div class="child top">
+                            <h5 class="card-title">Mini Project</h5>
+                            <p class="card-text">A Multi-page Responsive Website using CLI, HTML, CSS, Bootstrap, RWD, Github, Github Pages</p>
+                        </div>
+                        <div class="child bottom d-flex flex-column justify-content-end">
+                            <h6>Completed</h6>
+                            <a href="https://abcereno.github.io/miniproject1/" class="btn btn-primary">Visit Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card m-2">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <div class="card m-2 cardsize">
                     <img src="./assets/images/majorProject.png" class="card-img-top" alt="...">
-                    <div id="overflow" class="card-body">
-                        <h5 class="card-title">Major Project</h5>
-                        <p class="card-text">An API-driven Mini Web Application using React JS, Github, JavaScript/jQuery, Web APIs, Heroku/Netlify<br><h6 id="majorProjectTimer"></h6></p>
-                        <a href="https://abcereno.github.io/MajorProject" class="btn btn-primary">Visit Page</a>
+                    <div  class="card-body parent">
+                        <div class="child top">
+                            <h5 class="card-title">Major Project</h5>
+                            <p class="card-text">An API-driven Mini Web Application using React JS, Github, JavaScript/jQuery, Web APIs, Heroku/Netlify</p>
+                        </div>
+                        <div class="child bottom d-flex flex-column justify-content-end">
+                            <h6 id="majorProjectTimer"></h6>
+                            <a href="https://abcereno.github.io/MajorProject" class="btn btn-primary">Visit Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card m-2">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <div class="card m-2 cardsize parent">
                     <img src="./assets/images/capstone.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Capstone Project</h5>
-                        <p  class="card-text ">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku<br><h6 id="capstoneTimer"></h6></p>
-                        <a href="https://anthonybcereno.000webhostapp.com/" class="btn btn-primary">Visit Page</a>
+                    <div class="card-body parent">
+                        <div class="child top">
+                            <h5 class="card-title">Capstone Project</h5>
+                            <p  class="card-text ">A Full-stack web application using Bootstrap, Github, React.js, Laravel, Custom APIs, Vercel,Heroku</p>
+                        </div>
+                        <div class="child bottom d-flex flex-column justify-content-end">
+                            <h6 id="capstoneTimer"></h6>
+                            <a href="https://anthonybcereno.000webhostapp.com/" class="btn btn-primary">Visit Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,6 +285,22 @@
         </div>
     </div>
  <!-- modal  -->
+    <div class="modal fade" id="CV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content vh-100 min-vw-50">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Anthony Bernard Cereno CV</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+             <img id="modalPic1" src="./assets/images/Anthony Bernard Cereno.png" alt="">
+            </div> 
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -294,7 +320,7 @@
 <!--  -->
 <script type="text/javascript">    
     $('.js-scroll-trigger').click(function() {
-$('.navbar-collapse').collapse('hide');
+$('.navbar-collapse').hide();
 });
 </script>
 <script>
