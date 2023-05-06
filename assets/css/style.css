@@ -4,6 +4,7 @@ html{
 #profilePic{
     width: fit-content;
     height: fit-content;
+    border: 2px solid black;
 }
 body{
     background-image: url("../images/background.jpg") ;
@@ -59,6 +60,9 @@ img:not(#profilepic){
 #modalPic1{
     height: 100%;
     width: 100%;
+}
+#modalresume{
+    height: fit-content !important;
 }
 /* .content{
     margin-top: 150px;

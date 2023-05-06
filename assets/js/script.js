@@ -13,12 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
+    let timerInterval;
     const timer = document.getElementById("timer");
     const majorProjectTimer = document.getElementById("majorProjectTimer");
     const capstoneTimer = document.getElementById("capstoneTimer");
+    const miniproject = 'April 27, 2023';
+    const majorproject = 'March 28, 2023';
+    const capstone = 'April 22, 2023';
     function getChrono(){
         const now = new Date().getTime();
-        const countdownDate = new Date('April 27, 2023').getTime();
+        const countdownDate = new Date(`${miniproject}`).getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     function countDown(){
         const now = new Date().getTime();
-        const countdownDate = new Date('March 28, 2023').getTime();
+        const countdownDate = new Date(`${majorproject}`).getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
@@ -48,9 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
             majorProjectTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     }
+
+
     function countDownCap(){
         const now = new Date().getTime();
-        const countdownDate = new Date('April 22, 2023').getTime();
+        const countdownDate = new Date(`${capstone}`).getTime();
         const distanceBase = countdownDate - now;
         const days = Math.floor(distanceBase /(1000 * 60 * 60 * 24));
         const hours = Math.floor((distanceBase %(1000 * 60 * 60 * 24)) /
@@ -59,12 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const seconds = Math.floor((distanceBase % (1000 * 60)) /1000);
         console.log(days, hours, minutes, seconds);
         if(distanceBase <= 0){
+            clearInterval(timerInterval);
             capstoneTimer.innerText = "Completed";
         }else{
             capstoneTimer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     }
-    const countdownInterval = setInterval(() => {
+    
+    timerInterval = setInterval(() => {
         getChrono();
         countDown();
         countDownCap();
