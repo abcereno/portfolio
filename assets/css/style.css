@@ -5,6 +5,7 @@ html{
     width: fit-content;
     height: fit-content;
     border: 2px solid black;
+    box-shadow: inset 5rem 5rem 5rem 5rem rgb(59 97 137 / 40%);
 }
 body{
     background-image: url("../images/background.jpg") ;
