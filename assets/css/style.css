@@ -48,7 +48,7 @@ header{
 }
 .reveal{
     position: relative;
-    transform: translateX(150px);
+    transform: translateX(200px);
     opacity: 0;
     transition: all 1s ease-in-out;
 }
