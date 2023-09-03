@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 #profilePic{
     /* width: fit-content;
@@ -38,21 +39,22 @@ h5,h1{
 header{
    height: fit-content;
 }
+.navbar{
+  background: transparent;
+}
+.secondRow{
+  height: auto;
+  width: auto;
+}
 .reveal{
     position: relative;
-    transform: translateY(150px);
+    transform: translateX(150px);
     opacity: 0;
     transition: all 1s ease-in-out;
 }
 .reveal.active{
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
-}
-img:not(#profilepic){
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    align-items: center;
 }
 #modalPic{
     height: 300px;
@@ -65,11 +67,10 @@ img:not(#profilepic){
 #modalresume{
     height: fit-content !important;
 }
-/* .content{
-    margin-top: 150px;
-    margin-bottom: 100px;
-    height: auto;
-} */
+.row{
+    min-height: 100vh !important;
+    padding-top: 56px;
+}
 #interests ul li,h1,h5{
     display: flex;
     justify-content: center;

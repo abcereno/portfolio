@@ -1,872 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
-    <script src="./assets/js/bootstrap.bundle.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.min.js"
-      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">ABC</a>
-          <button
-            id="navbar-toggler"
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end text-bg-dark w-25 navbar-collapse"
-            tabindex="-1"
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                Links
-              </h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body w-100">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    aria-current="page"
-                    href="#home"
-                    onclick="handleClick(event)"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    href="#me"
-                    onclick="handleClick(event)"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    href="#portfolio"
-                    onclick="handleClick(event, '#portfolio')"
-                    >Portfolio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    href="#skillsets"
-                    onclick="handleClick(event, '#skillsets')"
-                    >Skills</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    href="#language"
-                    onclick="handleClick(event, '#language')"
-                    >Servers</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link js-scroll-trigger"
-                    href="#contact"
-                    onclick="handleClick(event, '#contact')"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+  <script src="./assets/js/bootstrap.bundle.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">ABC</a>
+        <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark w-25 navbar-collapse" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header d-flex justify-content-between col-12">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Links
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
           </div>
-        </div>
-      </nav>
-      <div class="row content mt-5" id="home">
-        <div
-          class="col-md-8 mt-5 d-flex flex-column justify-content-center align-items-center"
-        >
-          <h2 class="text-light">Hi! I'm</h2>
-          <h1>Anthony Bernard Cereno</h1>
-          <h2 class="text-light">
-            Full-Stack Web Developer
-            <h6 class="text-light" id="timer"></h6>
-          </h2>
-          <div class="d-flex justify-content-evenly w-100">
-            <a href="./Anthony Bernard Cereno - CV1.pdf" download>
-              <button type="button" class="btn btn-primary d-inline-block">
-                Download CV
-              </button>
-            </a>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#CV">
-              <button type="button" class="btn btn-primary d-inline-block">
-                View only CV
-              </button>
-            </a>
-          </div>
-        </div>
-        <div
-          class="col-md-4 d-flex justify-content-center align-items-center"
-        >
-          <img id="profilePic" class="img-fluid" src="./assets/images/me.png" />
-        </div>
-      </div>
-      <div class="row content reveal" id="certificate">
-        <div class="pt-5">
-          <h1 class="d-flex justify-content-center align-items-center">
-            KodeGo Certificate
-          </h1>
-          <div class="">
-            <img src="./assets/images/kodego.png" class="img-fluid"/>
-          </div>
-        </div>
-      </div>
-      <div class="row content reveal" id="me">
-        <div class="col-12">
-          <h1 class="d-flex justify-content-center align-items-center">
-            About Me
-          </h1>
-          <ul class="list-group list-group-flush bg-transparent">
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Don't give up, success is within reach; keep pushing forward,
-                stay positive and teach."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "To win the battle, you must engage; standing idle ensures
-                you'll never make the stage."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "True bravery shines in the face of fear; when you face your
-                demons, success will draw near."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Victory belongs to those who persist; keep pushing ahead, no
-                matter how hard you're hit."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "One tree can start a blaze, it's true; but one small spark can
-                ignite a fire in you."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Your circumstances don't define your fate; take action now,
-                don't hesitate."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "A degree is a trophy you've earned with pride; it shows your
-                knowledge and perseverance inside."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Results matter, that's certainly true; but your journey is
-                where you grow, learn and renew."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "When you hit rock bottom, it may seem like the end; but it's
-                the beginning of the climb, my friend."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Don't underestimate what you'll do in a decade; with patience
-                and effort, you'll rise like a renegade."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "There are many paths that lead to success; the view from the
-                top is worth the climb, no less."
-              </h4>
-            </li>
-            <li class="list-group-item bg-transparent text-light">
-              <h4>
-                "Broaden your skills, prepare for the fight; a diverse set of
-                talents will keep your future bright."
-              </h4>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        class="row content reveal"
-        id="nat"
-        style="overflow-x: auto; overflow-y: hidden"
-      >
-        <h1>National Career Assessment Exam 2010</h1>
-        <div class="col-12" style="padding: 5rem">
-          <div class="chart-container">
-            <div class="base"></div>
-            <!-- Left Side Meter-->
-            <ul class="meter">
-              <li>
-                <div>80%</div>
+          <div class="offcanvas-body w-100">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" aria-current="page" href="#home"
+                  onclick="handleClick(event)">Home</a>
               </li>
-              <li>
-                <div>60%</div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" aria-current="page" href="#certificate"
+                  onclick="handleClick(event)">Certificate</a>
               </li>
-              <li>
-                <div>40%</div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" aria-current="page" href="#nat"
+                  onclick="handleClick(event)">NCAE</a>
               </li>
-              <li>
-                <div>20%</div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" aria-current="page" href="#results"
+                  onclick="handleClick(event)">Results</a>
               </li>
-              <li>
-                <div></div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#me" onclick="handleClick(event)">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#portfolio"
+                  onclick="handleClick(event, '#portfolio')">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#skillsets"
+                  onclick="handleClick(event, '#skillsets')">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#language"
+                  onclick="handleClick(event, '#language')">Freelance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact"
+                  onclick="handleClick(event, '#contact')">Contact</a>
               </li>
             </ul>
-            <!-- Background-Grid -->
-            <table>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-            <!-- End Background Grid -->
-
-            <div class="bar one">SA</div>
-            <div class="bar two">RC</div>
-            <div class="bar three">VA</div>
-            <div class="bar four">MA</div>
-            <div class="bar five">CA</div>
-            <div class="bar six">VMS</div>
-            <div class="bar seven">NVA</div>
-            <div class="bar eight">LRA</div>
           </div>
         </div>
       </div>
-      <div class="row content reveal" id="results">
-        <div
-          class="col-lg-6 p-3 d-flex justify-content-center align-items-center mt-5"
-        >
-          <img class="img-fluid" src="./assets/images/NATexam.jpg" />
+    </nav>
+    <div class="row content " id="home">
+      <div class="col-md-8  d-flex flex-column justify-content-center align-items-center">
+        <h2 class="text-light">Hi! I'm</h2>
+        <h1>Anthony Bernard Cereno</h1>
+        <h2 class="text-light">
+          Full-Stack Web Developer
+          <h6 class="text-light" id="timer"></h6>
+        </h2>
+        <div class="d-flex justify-content-evenly w-100">
+          <a href="./Anthony Bernard Cereno - CV1.pdf" download>
+            <button type="button" class="btn btn-primary d-inline-block">
+              Download CV
+            </button>
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#CV">
+            <button type="button" class="btn btn-primary d-inline-block">
+              View only CV
+            </button>
+          </a>
         </div>
-        <div
-          class="col-lg-6 p-3 mt-5 d-flex flex-column justify-content-center align-items-center"
-        >
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <img id="profilePic" class="img-fluid" src="./assets/images/me.png" />
+      </div>
+    </div>
+    <div class="row content reveal h-auto" id="certificate">
+      <h1 class="d-flex justify-content-center align-items-center">
+        KodeGo Certificate
+      </h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <img class="img-fluid" src="./assets/images/kodego.png" />
+      </div>
+    </div>
+    <div class="row content reveal" id="me">
+      <div class="col-12">
+        <h1 class="d-flex justify-content-center align-items-center">
+          About Me
+        </h1>
+        <div class="d-flex">
+          <div class="vr"></div>
+          <div>
+            <ul class="list-group list-group-flush bg-transparent">
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Don't give up, success is within reach; keep pushing forward,
+                  stay positive and teach."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "To win the battle, you must engage; standing idle ensures
+                  you'll never make the stage."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "True bravery shines in the face of fear; when you face your
+                  demons, success will draw near."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Victory belongs to those who persist; keep pushing ahead, no
+                  matter how hard you're hit."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "One tree can start a blaze, it's true; but one small spark can
+                  ignite a fire in you."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Your circumstances don't define your fate; take action now,
+                  don't hesitate."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "A degree is a trophy you've earned with pride; it shows your
+                  knowledge and perseverance inside."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Results matter, that's certainly true; but your journey is
+                  where you grow, learn and renew."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "When you hit rock bottom, it may seem like the end; but it's
+                  the beginning of the climb, my friend."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Don't underestimate what you'll do in a decade; with patience
+                  and effort, you'll rise like a renegade."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "There are many paths that lead to success; the view from the
+                  top is worth the climb, no less."
+                </h4>
+              </li>
+              <li class="list-group-item bg-transparent text-light">
+                <h4>
+                  "Broaden your skills, prepare for the fight; a diverse set of
+                  talents will keep your future bright."
+                </h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content reveal" id="results">
+      <h1 class="col-12 d-flex justify-content-center align-items-center">National Career Assessment Exam 2010</h1>
+      <div class="col-lg-6 p-3 d-flex justify-content-center align-items-center ">
+        <img class="img-fluid" src="./assets/images/NATexam.jpg" />
+      </div>
+      <div class="col-lg-6 p-3  d-flex flex-column justify-content-center align-items-center">
+        <table>
+          <tr>
+            <td>AREAS</td>
+            <td>STANDARD<br />SCORE</td>
+            <td>PERCENTILE<br />RANK</td>
+          </tr>
+          <tr>
+            <td>GENERAL SCHOLASTIC APTITUDE (GSA)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SCIENTIFIC ABILITY (SA)</td>
+            <td>703.77</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>READING COMPREHENSION (RC)</td>
+            <td>650.53</td>
+            <td>93</td>
+          </tr>
+          <tr>
+            <td>VERBAL ABILITY (VA)</td>
+            <td>603.72</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>MATHEMATICAL ABILITY (MA)</td>
+            <td>745.48</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>OVERALL GSA</td>
+            <td>701.22</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>TECHNICAL VOCATIONAL APTITUDE (TVA)</td>
+          </tr>
+          <tr>
+            <td>CLERICAL ABILITY (CA)</td>
+            <td>603.67</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>VISUAL MANIPULATIVE SKILL (VMS)</td>
+            <td>477.94</td>
+            <td>41</td>
+          </tr>
+          <tr>
+            <td>OVERALL TVA</td>
+            <td>550.81</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>NON VERBAL ABILITY (NVA)</td>
+            <td>620.44</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td>LOGICAL REASONING ABILITY (LRA)</td>
+            <td>482.32</td>
+            <td>43</td>
+          </tr>
+          <tr>
+            <td>ENTREPRENEURAL SKILL (ES)</td>
+          </tr>
+          <tr>
+            <td>PLANNING & DECISION MAKING (PD)</td>
+            <td>499.65</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>BUDGETING, MARKETING & FORECASTING (BMF)</td>
+            <td>468.92</td>
+            <td>38</td>
+          </tr>
+          <tr>
+            <td>CREATIVITY (C)</td>
+            <td>621.61</td>
+            <td>89</td>
+          </tr>
+          <tr>
+            <td>OVERALL ES</td>
+            <td>527.72</td>
+            <td>61</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row content reveal" id="nat" style="overflow-x: auto; overflow-y: hidden">
+      <h1 class="d-flex justify-content-center align-items-center">National Career Assessment Graph</h1>
+      <div class="col-12" style="padding: 5rem">
+        <div class="chart-container">
+          <div class="base"></div>
+          <!-- Left Side Meter-->
+          <ul class="meter">
+            <li>
+              <div>80%</div>
+            </li>
+            <li>
+              <div>60%</div>
+            </li>
+            <li>
+              <div>40%</div>
+            </li>
+            <li>
+              <div>20%</div>
+            </li>
+            <li>
+              <div></div>
+            </li>
+          </ul>
+          <!-- Background-Grid -->
           <table>
             <tr>
-              <td>AREAS</td>
-              <td>STANDARD<br />SCORE</td>
-              <td>PERCENTILE<br />RANK</td>
-            </tr>
-            <tr>
-              <td>GENERAL SCHOLASTIC APTITUDE (GSA)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
-              <td>SCIENTIFIC ABILITY (SA)</td>
-              <td>703.77</td>
-              <td>98</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>READING COMPREHENSION (RC)</td>
-              <td>650.53</td>
-              <td>93</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>VERBAL ABILITY (VA)</td>
-              <td>603.72</td>
-              <td>85</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>MATHEMATICAL ABILITY (MA)</td>
-              <td>745.48</td>
-              <td>99</td>
-            </tr>
-            <tr>
-              <td>OVERALL GSA</td>
-              <td>701.22</td>
-              <td>98</td>
-            </tr>
-            <tr>
-              <td>TECHNICAL VOCATIONAL APTITUDE (TVA)</td>
-            </tr>
-            <tr>
-              <td>CLERICAL ABILITY (CA)</td>
-              <td>603.67</td>
-              <td>85</td>
-            </tr>
-            <tr>
-              <td>VISUAL MANIPULATIVE SKILL (VMS)</td>
-              <td>477.94</td>
-              <td>41</td>
-            </tr>
-            <tr>
-              <td>OVERALL TVA</td>
-              <td>550.81</td>
-              <td>70</td>
-            </tr>
-            <tr>
-              <td>NON VERBAL ABILITY (NVA)</td>
-              <td>620.44</td>
-              <td>88</td>
-            </tr>
-            <tr>
-              <td>LOGICAL REASONING ABILITY (LRA)</td>
-              <td>482.32</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td>ENTREPRENEURAL SKILL (ES)</td>
-            </tr>
-            <tr>
-              <td>PLANNING & DECISION MAKING (PD)</td>
-              <td>499.65</td>
-              <td>50</td>
-            </tr>
-            <tr>
-              <td>BUDGETING, MARKETING & FORECASTING (BMF)</td>
-              <td>468.92</td>
-              <td>38</td>
-            </tr>
-            <tr>
-              <td>CREATIVITY (C)</td>
-              <td>621.61</td>
-              <td>89</td>
-            </tr>
-            <tr>
-              <td>OVERALL ES</td>
-              <td>527.72</td>
-              <td>61</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </table>
-        </div>
-      </div>
-      <div class="row content reveal" id="portfolio">
-        <div class="col-12">
-          <h1 class="d-flex justify-content-center align-items-center">
-            Bootcamp Journey
-          </h1>
-        </div>
-        <div class="col-lg-4 col-md-5 col-sm-12">
-          <div class="card m-2 cardsize">
-            <img
-              src="./assets/images/miniproject.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body parent">
-              <div class="child top">
-                <h5 class="card-title">Mini Project</h5>
-                <p class="card-text">
-                  A Multi-page Responsive Website using CLI, HTML, CSS,
-                  Bootstrap, RWD, Github, Github Pages
-                </p>
-              </div>
-              <div class="child bottom d-flex flex-column justify-content-end">
-                <h6>Completed</h6>
-                <a
-                  href="https://abcereno.github.io/miniproject1/"
-                  class="btn btn-primary"
-                  >Visit Page</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-5 col-sm-12">
-          <div class="card m-2 cardsize">
-            <img
-              src="./assets/images/majorProject.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body parent">
-              <div class="child top">
-                <h5 class="card-title">Major Project</h5>
-                <p class="card-text">
-                  An API-driven Mini Web Application using React JS, Github,
-                  JavaScript/jQuery, Web APIs, Heroku/Netlify
-                </p>
-              </div>
-              <div class="child bottom d-flex flex-column justify-content-end">
-                <h6 id="majorProjectTimer"></h6>
-                <a
-                  href="https://abcereno.github.io/MajorProject"
-                  class="btn btn-primary"
-                  >Visit Page</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-5 col-sm-12">
-          <div class="card m-2 cardsize parent">
-            <img
-              src="./assets/images/capstone.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body parent">
-              <div class="child top">
-                <h5 class="card-title">Capstone Project</h5>
-                <p class="card-text">
-                  A Full-stack web application using Bootstrap, Github,
-                  React.js, Laravel, Custom APIs, Vercel,Heroku
-                </p>
-              </div>
-              <div class="child bottom d-flex flex-column justify-content-end">
-                <h6 id="capstoneTimer"></h6>
-                <a
-                  href="https://anthonybcereno.000webhostapp.com/"
-                  class="btn btn-primary"
-                  >Visit Page</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row content reveal" id="skillsets">
-        <div class="col-12">
-          <h1 class="d-flex justify-content-center align-items-center">
-            SKILL SETS
-          </h1>
-        </div>
-        <ul
-          class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center"
-        >
-          <h1>Languages</h1>
-          <li>
-            <h3>HTML 5</h3>
-          </li>
-          <li>
-            <h3>CSS 3</h3>
-          </li>
-          <li>
-            <h3>JAVASCRIPT</h3>
-          </li>
-          <li>
-            <h3>PHP</h3>
-          </li>
-        </ul>
-        <ul
-          class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center"
-        >
-          <h1>Soft Skills</h1>
-          <li>
-            <h3>Critical thinking</h3>
-          </li>
-          <li>
-            <h3>Teamwork</h3>
-          </li>
-          <li>
-            <h3>Problem solving</h3>
-          </li>
-          <li>
-            <h3>Communication</h3>
-          </li>
-          <li>
-            <h3>Technology Trend Awareness</h3>
-          </li>
-        </ul>
-        <ul
-          class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center"
-        >
-          <h1>Frameworks</h1>
-          <li>
-            <h3>jQuery</h3>
-          </li>
-          <li>
-            <h3>Bootstrap</h3>
-          </li>
-          <li>
-            <h3>Sass</h3>
-          </li>
-          <li>
-            <h3>Node.js</h3>
-          </li>
-          <li>
-            <h3>React.js</h3>
-          </li>
-          <li>
-            <h3>Laravel</h3>
-          </li>
-          <li>
-            <h3>WordPress</h3>
-          </li>
-        </ul>
-        <ul
-          class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center"
-        >
-          <h1>Other Tech</h1>
-          <li>
-            <h3>Git Bash</h3>
-          </li>
-          <li>
-            <h3>Github</h3>
-          </li>
-          <li>
-            <h3>Docker</h3>
-          </li>
-          <li>
-            <h3>VsCode</h3>
-          </li>
-          <li>
-            <h3>Postman</h3>
-          </li>
-          <li>
-            <h3>Figma</h3>
-          </li>
-          <li>
-            <h3>Bash Shell</h3>
-          </li>
-          <li>
-            <h3>MySQl</h3>
-          </li>
-          <li>
-            <h3>MongoDB</h3>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="row d-flex justify-content-evenly content reveal"
-        id="language"
-      >
-        <div class="col-12">
-          <h1 class="d-flex justify-content-center align-items-center">
-            SERVERS
-          </h1>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://www.mindphp.com/images/articles/202110/laragon-icon.jpg"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Laragon</h5>
-                <p class="card-text">used for atleast 6 months</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://mms.businesswire.com/media/20211123005573/en/929867/23/vercel-logo-freelogovectors.net.jpg"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Vercel</h5>
-                <p class="card-text">used for atleast 6 months</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://www.appdynamics.com/c/r/appdynamics/solutions/azure-monitoring/index/jcr:content/Title/blade_copy_172843868/bladeContents1/image/image.img.png/1670878360555.png"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Azure</h5>
-                <p class="card-text">used for atleast 6 months</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_bf0fb4cb7fe948c42f37ded73895638f/salesforce-heroku.png"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Heroku</h5>
-                <p class="card-text">used for atleast 6 months</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/w1200-h630-p-k-no-nu/image00.png"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Firebase</h5>
-                <p class="card-text">Beginner</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card m-2" style="max-width: 540px">
-          <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center">
-              <img
-                src="https://marvel-b1-cdn.bc0a.com/f00000000205858/www.netscout.com/sites/default/files/2022-02/17/images/cloud-lockup-logo-500px.png"
-                class="img-fluid rounded-start"
-                alt="..."
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Google Cloud</h5>
-                <p class="card-text">Beginner</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="contact">
-        <div class="col-6" id="like">
-          <h6 class="text-light">Follow Me</h6>
-          <ul class="list-unstyled">
-            <li>
-              <a href="https://www.facebook.com/abcereno/"
-                ><i class="fa-brands fa-facebook"></i>FACEBOOK</a
-              >
-            </li>
-            <li>
-              <a href="https://twitter.com/CerenoBernard"
-                ><i class="fa-brands fa-twitter"></i>TWITTER</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-6" id="links">
-          <h6>Contact Me!</h6>
-          <ul class="list-unstyled">
-            <li>
-              <i class="fa-brands fa-google" style="color: #005eff"></i>
-              <a
-                href="mailto:cereno.abc@gmail.com?subject=We%20Want%20You!&body=Hi%20Anthony!%20Can%20I%20interest%20you%20in%20an%20opportunity%20for%20growth%20and%20learning%20from%20seniors?%20Hope%20to%20hear%20from%20you%20soon!"
-                >Gmail</a
-              >
-            </li>
-            <li>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                ><i class="fa-brands fa-whatsapp"></i>WHATSAPP</a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- Messenger Chat Plugin Code -->
-        <div id="fb-root"></div>
+          <!-- End Background Grid -->
 
-        <!-- Your Chat Plugin code -->
-        <div id="fb-customer-chat" class="fb-customerchat"></div>
+          <div class="bar one">SA</div>
+          <div class="bar two">RC</div>
+          <div class="bar three">VA</div>
+          <div class="bar four">MA</div>
+          <div class="bar five">CA</div>
+          <div class="bar six">VMS</div>
+          <div class="bar seven">NVA</div>
+          <div class="bar eight">LRA</div>
+        </div>
       </div>
     </div>
-    <!-- modal  -->
-    <div
-      class="modal fade"
-      id="CV"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content min-vw-50" id="modalresume">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Anthony Bernard Cereno CV
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <div class="row content reveal" id="portfolio">
+      <div class="col-12">
+        <h1 class="d-flex justify-content-center align-items-center">
+          Bootcamp Journey
+        </h1>
+      </div>
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="card m-2 cardsize">
+          <img src="./assets/images/miniproject.png" class="card-img-top" alt="..." />
+          <div class="card-body parent">
+            <div class="child top">
+              <h5 class="card-title">Mini Project</h5>
+              <p class="card-text">
+                A Multi-page Responsive Website using CLI, HTML, CSS,
+                Bootstrap, RWD, Github, Github Pages
+              </p>
+            </div>
+            <div class="child bottom d-flex flex-column justify-content-end">
+              <h6>Completed</h6>
+              <a href="https://abcereno.github.io/miniproject1/" class="btn btn-primary">Visit Page</a>
+            </div>
           </div>
-          <div class="modal-body d-flex justify-content-center">
-            <img
-              id="modalPic1"
-              src="./assets/images/Anthony Bernard Cereno.png"
-              alt=""
-            />
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="card m-2 cardsize">
+          <img src="./assets/images/majorProject.png" class="card-img-top" alt="..." />
+          <div class="card-body parent">
+            <div class="child top">
+              <h5 class="card-title">Major Project</h5>
+              <p class="card-text">
+                An API-driven Mini Web Application using React JS, Github,
+                JavaScript/jQuery, Web APIs, Heroku/Netlify
+              </p>
+            </div>
+            <div class="child bottom d-flex flex-column justify-content-end">
+              <h6 id="majorProjectTimer"></h6>
+              <a href="https://abcereno.github.io/MajorProject" class="btn btn-primary">Visit Page</a>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="card m-2 cardsize parent">
+          <img src="./assets/images/capstone.png" class="card-img-top" alt="..." />
+          <div class="card-body parent">
+            <div class="child top">
+              <h5 class="card-title">Capstone Project</h5>
+              <p class="card-text">
+                A Full-stack web application using Bootstrap, Github,
+                React.js, Laravel, Custom APIs, Vercel,Heroku
+              </p>
+            </div>
+            <div class="child bottom d-flex flex-column justify-content-end">
+              <h6 id="capstoneTimer"></h6>
+              <a href="https://anthonybcereno.000webhostapp.com/" class="btn btn-primary">Visit Page</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Scan My whatsapp Contact!
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <div class="row content reveal" id="skillsets">
+      <div class="col-12">
+        <h1 class="d-flex justify-content-center align-items-center">
+          SKILL SETS
+        </h1>
+      </div>
+      <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+        <h1>Languages</h1>
+        <li>
+          <h3>HTML 5</h3>
+        </li>
+        <li>
+          <h3>CSS 3</h3>
+        </li>
+        <li>
+          <h3>JAVASCRIPT</h3>
+        </li>
+        <li>
+          <h3>PHP</h3>
+        </li>
+      </ul>
+      <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+        <h1>Soft Skills</h1>
+        <li>
+          <h3>Critical thinking</h3>
+        </li>
+        <li>
+          <h3>Teamwork</h3>
+        </li>
+        <li>
+          <h3>Problem solving</h3>
+        </li>
+        <li>
+          <h3>Communication</h3>
+        </li>
+        <li>
+          <h3>Technology Trend Awareness</h3>
+        </li>
+      </ul>
+      <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+        <h1>Frameworks</h1>
+        <li>
+          <h3>jQuery</h3>
+        </li>
+        <li>
+          <h3>Bootstrap</h3>
+        </li>
+        <li>
+          <h3>Sass</h3>
+        </li>
+        <li>
+          <h3>Node.js</h3>
+        </li>
+        <li>
+          <h3>React.js</h3>
+        </li>
+        <li>
+          <h3>Laravel</h3>
+        </li>
+        <li>
+          <h3>WordPress</h3>
+        </li>
+      </ul>
+      <ul class="col-lg-3 col-md-6 col-sm-12 mt-3 flex-column justify-content-center">
+        <h1>Other Tech</h1>
+        <li>
+          <h3>Git Bash</h3>
+        </li>
+        <li>
+          <h3>Github</h3>
+        </li>
+        <li>
+          <h3>Docker</h3>
+        </li>
+        <li>
+          <h3>VsCode</h3>
+        </li>
+        <li>
+          <h3>Postman</h3>
+        </li>
+        <li>
+          <h3>Figma</h3>
+        </li>
+        <li>
+          <h3>Bash Shell</h3>
+        </li>
+        <li>
+          <h3>MySQl</h3>
+        </li>
+        <li>
+          <h3>MongoDB</h3>
+        </li>
+      </ul>
+    </div>
+    <div class="row d-flex justify-content-evenly content reveal" id="language">
+      <h1 class="d-flex justify-content-center align-items-center">
+        Freelance
+      </h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="./assets/images/freelance1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Zeta Develops</h5>
+              <p class="card-text">Zeta Developed the design while I was given the task to complete the functionalities
+                and responsiveness. <a href="https://abcereno.github.io/firstTask/">Timetable</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 06/22/2023</small>
+            </div>
           </div>
-          <div class="modal-body d-flex justify-content-center">
-            <img id="modalPic" src="./assets/images/whatsapp.jpg" alt="" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="./assets/images/bestcleaning.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Strategizr inc.</h5>
+              <p class="card-text">Strategizr Developed the design while I was given the task to complete the
+                functionalities from frontend to backend, and transitions. <a
+                  href="https://www.bestcleaning.co/calculator">bestcleaning.co/calculator</a></p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Last updated 09/02/2023</small>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--  -->
-    <script type="text/javascript">
-      $(".js-scroll-trigger").click(function () {
-        $(".navbar-collapse").collapse("hide");
-        $(".offcanvas").offcanvas("hide");
+  </div>
+  <footer class="d-flex container" id="contact">
+    <div class="col-6" id="like">
+      <h6 class="text-light">Follow Me</h6>
+      <ul class="list-unstyled">
+        <li>
+          <i class="fa-brands fa-facebook" style="color: #005eff"></i>
+          <a href="https://www.facebook.com/abcereno/">facebook</a>
+        </li>
+        <li>
+        <i class="fa-brands fa-twitter" style="color: #005eff"></i>
+          <a href="https://twitter.com/CerenoBernard">Twitter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6" id="links">
+      <h6>Contact Me!</h6>
+      <ul class="list-unstyled">
+        <li>
+          <i class="fa-brands fa-google" style="color: #005eff"></i>
+          <a
+            href="mailto:cereno.abc@gmail.com?subject=We%20Want%20You!&body=Hi%20Anthony!%20Can%20I%20interest%20you%20in%20an%20opportunity%20for%20growth%20and%20learning%20from%20seniors?%20Hope%20to%20hear%20from%20you%20soon!">Gmail</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-whatsapp" style="color: #005eff"></i>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Whatsapp</a>
+        </li>
+      </ul>
+  </footer>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  </div>
+  </div>
+  <!-- modal  -->
+  <div class="modal fade" id="CV" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content min-vw-50" id="modalresume">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Anthony Bernard Cereno CV
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <img id="modalPic1" src="./assets/images/Anthony Bernard Cereno.png" alt="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Scan My whatsapp Contact!
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <img id="modalPic" src="./assets/images/whatsapp.jpg" alt="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <script type="text/javascript">
+    $(".js-scroll-trigger").click(function () {
+      $(".navbar-collapse").collapse("hide");
+      $(".offcanvas").offcanvas("hide");
+    });
+  </script>
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "102043556224641");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v16.0",
       });
-    </script>
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "102043556224641");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+    };
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v16.0",
-        });
-      };
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+</body>
 
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-  </body>
 </html>
