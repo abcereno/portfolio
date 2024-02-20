@@ -45,6 +45,7 @@ const About = () => {
                         <li>{non.description4}</li>
                       </ul>
                     </p>
+                    <h6><a href={non.link}>Visit Now!</a></h6>
                     <h6 className="text-danger">{non.note}</h6>
                   </div>
                 </div>
@@ -64,6 +65,7 @@ const About = () => {
                         <li>{non.description4}</li>
                       </ul>
                     </p>
+                    <h6><a href={non.link}>Visit Now!</a></h6>
                     <h6 className="text-danger">{non.note}</h6>
                   </div>
                 </div>
